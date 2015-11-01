@@ -173,3 +173,14 @@ div.fancy-select.birth-date ul.options {
   background: url("../images/old-ie/rgba-85.png") repeat 0 0; }
   div.fancy-select.birth-date ul.options li.hover:before {
     background: url("../images/old-ie/rgba-90.png") repeat 0 0; }
+
+.just-won-popup {
+  behavior: url(PIE.htc);
+  -webkit-box-shadow: -2px 3.5px 6px black;
+  -moz-box-shadow: -2px 3.5px 6px black;
+  box-shadow: -2px 3.5px 6px black; }
+  .just-won-popup .player-details .img-ref:before {
+    behavior: url(PIE.htc);
+    -webkit-box-shadow: inset 0 0 2px 0 #00f4fd;
+    -moz-box-shadow: inset 0 0 2px 0 #00f4fd;
+    box-shadow: inset 0 0 2px 0 #00f4fd; }

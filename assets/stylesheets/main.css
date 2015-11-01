@@ -26,7 +26,7 @@
   font-style: normal;
   font-weight: normal; }
 
-.leaders-table-name li .name, .leaders-table-name li .score, .leaders-table li .name, .leaders-table li .score, .game-list .game-item .game-frame .game-name, .aside-block.game-month .game-description .game-name, .header-reg .user-info .balance-value, .header-reg .profile-name .user-name, .characteristics .characteristics-list td span, .tourney-card .center-section .tourney-games-list li a, .tourney-card .right-section .medals .fund, .tourney-card .right-section .tourney-leaders-list li span, .aside-block.tournaments.all-tourney-table .profitable-game-block .profitable-game .game-name .name, .aside-block.tournaments.all-tourney-table .profitable-game-block .profitable-game .game-name .description, .popup .popup-head, .bonus-header, .game-container .leaders-table li .score, .game-mode .aside-block.tournaments .header .best-tourney, .cabinet-section .contact-box .contact-line .contact-data, .cabinet-section .profile-info-lines .profile-info-line .section-info {
+.leaders-table-name li .name, .leaders-table-name li .score, .leaders-table li .name, .leaders-table li .score, .game-list .game-item .game-frame .game-name, .aside-block.game-month .game-description .game-name, .header-reg .user-info .balance-value, .header-reg .profile-name .user-name, .characteristics .characteristics-list td span, .tourney-card .center-section .tourney-games-list li a, .tourney-card .right-section .medals .fund, .tourney-card .right-section .tourney-leaders-list li span, .aside-block.tournaments.all-tourney-table .profitable-game-block .profitable-game .game-name .name, .aside-block.tournaments.all-tourney-table .profitable-game-block .profitable-game .game-name .description, .popup .popup-head, .just-won-popup .player-details .player-info, .bonus-header, .game-container .leaders-table li .score, .game-mode .aside-block.tournaments .header .best-tourney, .cabinet-section .contact-box .contact-line .contact-data, .cabinet-section .profile-info-lines .profile-info-line .section-info {
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -316,7 +316,7 @@ body {
     -o-transform: rotate(360deg);
     -webkit-transform: rotate(360deg); } }
 
-.tourney-card .left-section .tourn-img-container .img-shadow:before, .aside-block.tournaments.all-tourney-table .tourn-img-bg .img-shadow:before, .characteristics .characteristics-list td.value .bg, .tourney-card:before, .tourney-card .left-section .tourn-info .super-tourney:before, .tourney-card .left-section .tourn-info .period:before, .prizes-table li .bg, .leaders-tables .bg, .leaders-tables:before, .game-mode .user-info .status-box:before, .game-mode .user-info .balance-drifts:before, .game-mode .user-info .cashback:before, .game-container:before, .game-container.demo .select-greeting-bonus:before, .game-container .left-column .game-of-month:before, .cabinet:before, .cabinet-section .profile-info-lines .profile-info-line:before, .cabinet-section.bonuses .cabinet-bonus:before {
+.tourney-card .left-section .tourn-img-container .img-shadow:before, .aside-block.tournaments.all-tourney-table .tourn-img-bg .img-shadow:before, .characteristics .characteristics-list td.value .bg, .tourney-card:before, .tourney-card .left-section .tourn-info .super-tourney:before, .tourney-card .left-section .tourn-info .period:before, .prizes-table li .bg, .leaders-tables .bg, .leaders-tables:before, .just-won-popup .player-details .img-ref:before, .game-mode .user-info .status-box:before, .game-mode .user-info .balance-drifts:before, .game-mode .user-info .cashback:before, .game-container:before, .game-container.demo .select-greeting-bonus:before, .game-container .left-column .game-of-month:before, .cabinet:before, .cabinet-section .profile-info-lines .profile-info-line:before, .cabinet-section.bonuses .cabinet-bonus:before {
   content: "";
   position: absolute;
   top: 0;
@@ -5134,6 +5134,82 @@ footer {
   margin-bottom: 68px; }
 .popup.password-changed .authorization-btn {
   margin: 0 auto; }
+
+.just-won-popup {
+  position: fixed;
+  z-index: 16;
+  left: 0;
+  bottom: 8px;
+  width: 100%;
+  height: 60px;
+  background: url("../images/popup/just-won-popup.png") center 0 repeat-x;
+  -webkit-box-shadow: -2px 3.5px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -2px 3.5px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: -2px 3.5px 6px rgba(0, 0, 0, 0.3); }
+  .just-won-popup .player-details {
+    float: left; }
+    .just-won-popup .player-details .img-ref {
+      margin-top: 10px;
+      margin-left: 33px;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      width: 68px;
+      height: 45px; }
+      .just-won-popup .player-details .img-ref img {
+        display: block;
+        width: 68px;
+        height: 45px; }
+      .just-won-popup .player-details .img-ref:before {
+        -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 244, 253, 0.18);
+        -moz-box-shadow: inset 0 0 2px 0 rgba(0, 244, 253, 0.18);
+        box-shadow: inset 0 0 2px 0 rgba(0, 244, 253, 0.18); }
+    .just-won-popup .player-details .play-btn {
+      margin-top: 17px;
+      margin-left: 20px;
+      display: inline-block;
+      vertical-align: top;
+      width: 99px;
+      height: 28px;
+      line-height: 30px;
+      font-family: "Russo One", sans-serif;
+      font-size: 9px;
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      color: #2e1000;
+      background: url("../images/buttons/orange-btn_99x28.png") 0 0 no-repeat;
+      position: relative; }
+      .just-won-popup .player-details .play-btn:hover {
+        background-position: 0 -30px; }
+    .just-won-popup .player-details .player-info {
+      display: inline-block;
+      vertical-align: top;
+      text-transform: uppercase;
+      color: white;
+      margin-top: 24px;
+      margin-left: 18px;
+      letter-spacing: 1px;
+      font-weight: 600;
+      font-size: 14px; }
+      .just-won-popup .player-details .player-info .game-name {
+        text-decoration: none;
+        color: #02de41; }
+      .just-won-popup .player-details .player-info .sum {
+        color: #ff5300; }
+  .just-won-popup .close-icon {
+    position: relative;
+    float: right;
+    margin-top: 26px;
+    margin-right: 19px;
+    width: 13px;
+    height: 13px;
+    background: url("../images/sprite/sprite.png") -179px -215px no-repeat;
+    display: block; }
+    .just-won-popup .close-icon:hover {
+      position: relative;
+      right: -1px;
+      background-position: -196px -215px; }
 
 .left-content.inner-bonus .content-header {
   text-align: left;

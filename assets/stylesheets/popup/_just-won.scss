@@ -1,0 +1,96 @@
+$just-won-popup-h: 60px;
+$just-won-close-icon-w: 13px;
+$just-won-close-icon-h: 13px;
+$just-won-image-w: 68px;
+$just-won-image-h: 45px;
+$just-won-play-btn-w: 99px;
+$just-won-play-btn-h: 28px;
+$game-name-color: rgb(2, 222, 65);
+
+.just-won-popup {
+  position: fixed;
+  z-index: 16;
+  left: 0;
+  bottom: 8px;
+  @include size(100%,$just-won-popup-h);
+  background: url("../images/popup/just-won-popup.png") center 0 repeat-x;
+  @include box-shadow(-2px 3.5px 6px rgba(0, 0, 0, 0.3));
+  .player-details {
+    float: left;
+    .img-ref {
+      margin-top: 10px;
+      margin-left: 33px;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      @include size($just-won-image-w,$just-won-image-h);
+      img {
+        display: block;
+        @include size($just-won-image-w,$just-won-image-h);
+      }
+      &:before {
+        @extend %full-size-pseudo;
+        @include box-shadow(inset 0 0 2px 0 rgba(0, 244, 253, 0.18));
+      }
+    }
+    .play-btn {
+      margin-top: 17px;
+      margin-left: 20px;
+      display: inline-block;
+      vertical-align: top;
+      @include size($just-won-play-btn-w,$just-won-play-btn-h);
+      line-height: $just-won-play-btn-h + 2;
+      font: {
+        family: "Russo One", sans-serif;
+        size: 9px;
+      }
+      text:
+      {
+        decoration: none;
+        align: center;
+        transform: uppercase;
+      }
+      color: $standard-btn-color;
+      background: url("../images/buttons/orange-btn_99x28.png") 0 0 no-repeat;
+      &:hover {
+        background-position: 0 -30px;
+      }
+      position: relative;
+    }
+    .player-info {
+      @extend %text-overflow;
+      display: inline-block;
+      vertical-align: top;
+      text-transform: uppercase;
+      color: $base-color;
+      margin-top: 24px;
+      margin-left: 18px;
+      letter-spacing: 1px;
+      font: {
+        weight: 600;
+        size: 14px;
+      }
+      .game-name {
+        text-decoration: none;
+        color: $game-name-color;
+      }
+      .sum {
+        color: $light-orange;
+      }
+    }
+  }
+  .close-icon {
+    position: relative;
+    float: right;
+    margin-top: 26px;
+    margin-right: 19px;
+    @include size($just-won-close-icon-w,$just-won-close-icon-h);
+    background: url("../images/sprite/sprite.png") -179px -215px no-repeat;
+    display: block;
+    &:hover {
+      position: relative;
+      right: -1px;
+      background-position: -196px -215px;
+    }
+  }
+}

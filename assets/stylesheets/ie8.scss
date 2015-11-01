@@ -338,3 +338,20 @@ div.fancy-select.birth-date ul.options {
     }
   }
 }
+
+.just-won-popup {
+  behavior: url(PIE.htc);
+  -webkit-box-shadow: -2px 3.5px 6px rgb(0, 0, 0);
+  -moz-box-shadow: -2px 3.5px 6px rgb(0, 0, 0);
+  box-shadow: -2px 3.5px 6px rgb(0, 0, 0);
+  .player-details {
+    .img-ref {
+      &:before {
+        behavior: url(PIE.htc);
+        -webkit-box-shadow: inset 0 0 2px 0 rgb(0, 244, 253);
+        -moz-box-shadow: inset 0 0 2px 0 rgb(0, 244, 253);
+        box-shadow: inset 0 0 2px 0 rgb(0, 244, 253);
+      }
+    }
+  }
+}
