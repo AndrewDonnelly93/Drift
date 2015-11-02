@@ -184,3 +184,6 @@ div.fancy-select.birth-date ul.options {
     -webkit-box-shadow: inset 0 0 2px 0 #00f4fd;
     -moz-box-shadow: inset 0 0 2px 0 #00f4fd;
     box-shadow: inset 0 0 2px 0 #00f4fd; }
+
+.aside-block.best-players-block .top-right-corner {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20); }

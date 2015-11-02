@@ -1,0 +1,141 @@
+$best-players-table-name-first-cell-w: 22px;
+$best-players-table-name-second-cell-w: 50px;
+$best-players-table-name-third-cell-w: 50px;
+$best-players-table-row-name-w: 198px;
+$best-players-table-row-sum-w: 100px;
+$best-players-table-cell-h: 33px;
+
+.aside-block.best-players-block {
+  padding-bottom: 26px;
+  .top-right-corner {
+    opacity: .2;
+  }
+  .aside-header {
+    .aside-head {
+      font-size: 15px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      line-height: 1.1;
+    }
+    margin-bottom: 23px;
+  }
+  .best-players-table-name {
+    list-style: none;
+    width: 100%;
+    li {
+      display: block;
+      font:
+      {
+        size: 10px;
+        weight: 600;
+      }
+      text:
+      {
+        align: left;
+        transform: uppercase;
+      }
+      color: $light-gray;
+      width: $leaders-table-row-w;
+      @include border-box;
+      &:first-child {
+        float: left;
+        text-align: right;
+        width: $best-players-table-name-first-cell-w;
+      }
+      &:nth-child(2) {
+        float: left;
+        text-align: left;
+        padding-left: 4px;
+        width: $best-players-table-name-second-cell-w;
+      }
+      &:last-child {
+        padding-right: 10px;
+        float: right;
+        text-align: right;
+        width: $best-players-table-name-third-cell-w;
+      }
+    }
+    padding-bottom: 13px;
+  }
+  .best-players-table {
+    margin-bottom: 22px;
+    width: 100%;
+    tr {
+      display: block;
+      position: relative;
+      margin-bottom: 7px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        left: -1px;
+        width: $leaders-table-row-w * 2 - 1;
+        height: $best-players-table-cell-h;
+        background: url(../images/small-tournaments-user-row.png) no-repeat 0 0;
+      }
+      &.current-user {
+        .name {
+          color: $light-orange;
+        }
+        .score {
+          color: $light-orange;
+        }
+      }
+    }
+    td {
+      display: block;
+      text:
+      {
+        align: left;
+      }
+      color: $light-gray;
+      width: $leaders-table-row-w;
+      height: $best-players-table-cell-h;
+      line-height: $best-players-table-cell-h + 2;
+      font: {
+        size: 10px;
+      }
+      position: relative;
+      z-index: 2;
+      @include border-box;
+      &.name {
+        .rank {
+          padding-right: 2px;
+        }
+        float: left;
+        position: relative;
+        z-index: 2;
+        padding-left: 17px;
+        width: $best-players-table-row-name-w;
+        color: $light-green;
+        @extend %text-overflow;
+      }
+      &.sum {
+        float: right;
+        padding-right: 10px;
+        text-align: right;
+        width: $best-players-table-row-sum-w;
+        @extend %text-overflow;
+        font: {
+          weight: 600;
+        }
+        text: {
+          transform: uppercase;
+        }
+        color: $base-color;
+      }
+    }
+  }
+  .btn-container {
+    z-index: 5;
+    padding: 0;
+    text-align: center;
+  }
+  .activate-btn {
+    display: inline-block;
+    @extend %orange-btn;
+  }
+
+}
